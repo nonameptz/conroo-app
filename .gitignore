@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Сборка
+dist/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Файлы окружения
+.env.local
+.env.*.local

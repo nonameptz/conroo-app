@@ -1,14 +1,13 @@
 # Node modules
 node_modules/
 
-# Сборка
 dist/
 
-# Логи
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Файлы окружения
+.vscode
+.idea
 .env.local
 .env.*.local

@@ -18,7 +18,7 @@ export const connectSSE = (
 
   sse.onopen = () => {
     reconnectAttempts = 0
-    console.log('SSE successfully connected')
+    console.warn('SSE successfully connected')
   }
 
   sse.onmessage = (event) => {
@@ -39,7 +39,7 @@ export const connectSSE = (
     if (reconnectAttempts < MAX_RECONNECT_ATTEMPTS) {
       reconnectAttempts++
       setTimeout(() => {
-        console.log(`Trying to reconnect (${reconnectAttempts})`)
+        console.warn(`Trying to reconnect (${reconnectAttempts})`)
         connectSSE(onMessage, onError)
       }, RECONNECT_INTERVAL)
     } else {

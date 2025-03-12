@@ -61,9 +61,6 @@ export function useTimeSlotHelpers() {
     return `${startStr} – ${endStr}`
   }
 
-  /**
-   * Получить текущую вместимость (учитывая разные поля capacity).
-   */
   function getCurrentCapacity(slot: TimeSlot) {
     return slot.capacity.current_capacity || slot.capacity.current || 0
   }

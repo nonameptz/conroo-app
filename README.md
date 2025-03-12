@@ -13,6 +13,28 @@ A Vue.js application for managing and displaying time slots with capacity indica
 - Error handling with automatic reconnection
 - Vuetify UI components integration
 
+## Design Choices
+
+### Architecture
+- **Composables**: Separated business logic into reusable composables (`useTimeSlots`, `useTimeSlotHelpers`) for better code organization and reusability
+- **Services Layer**: Isolated API and SSE communication in dedicated services for better maintainability
+- **Type Safety**: Used TypeScript interfaces for API responses and SSE updates to catch potential errors early
+
+### Real-time Updates
+- **Server-Sent Events**: Chose SSE over WebSocket for simpler one-way real-time updates
+- **Reconnection Logic**: Implemented exponential backoff with max attempts to handle network issues gracefully
+- **Error Handling**: Added comprehensive error handling with user feedback via snackbars
+
+### UI/UX
+- **Timeline View**: Horizontal timeline for intuitive time slot visualization
+- **Capacity Indicators**: Color coding for quick capacity status recognition
+- **Responsive Design**: Horizontal scrolling for better mobile experience
+
+### Testing
+- **Unit Tests**: Focused on testing business logic in composables
+- **Isolated Tests**: Separated test files in `__tests__` directories for better organization
+- **Vitest**: Chose Vitest for its Vue.js integration and speed
+
 ## Prerequisites
 
 - Node.js (v20 or higher)

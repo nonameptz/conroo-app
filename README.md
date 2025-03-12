@@ -2,6 +2,8 @@
 
 A Vue.js application for managing and displaying time slots with capacity indicators. The app shows available time slots organized by date, with visual indicators for different capacity states (green, yellow, red).
 
+![Demo](public/demo.gif)
+
 ## Features
 
 - Display time slots grouped by date
@@ -22,7 +24,7 @@ A Vue.js application for managing and displaying time slots with capacity indica
 1. Clone the repository:
 ```bash
 git clone https://github.com/nonameptz/conroo-app.git
-cd time-slot-app
+cd conroo-app
 ```
 
 2. Install dependencies:
